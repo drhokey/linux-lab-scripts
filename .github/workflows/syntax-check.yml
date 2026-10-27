@@ -1,0 +1,17 @@
+name: Syntax Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Bash script syntax
+        run: |
+          bash -n count_files.sh
+          bash -n analyze_files.sh
