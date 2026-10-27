@@ -12,6 +12,8 @@
 
 ```bash
 ./count_files.sh
+
+./analyze_files.sh
 ```
 
 ## Автор
